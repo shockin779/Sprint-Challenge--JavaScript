@@ -7,6 +7,9 @@
   * In the body of the function return the callback with the two parameters that you created
 */
 
+function consume(x, y, cb) {
+  console.log(cb(x, y));
+}
 
 /* Step 2: Create several functions to callback with consume();
   * Create a function named add that returns the sum of two numbers
@@ -14,11 +17,22 @@
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
 
+function add(x, y) {
+  return x + y;
+}
+
+function multiply(x, y) {
+  return x * y;
+}
+
+function greeting(fName, lName) {
+  return `Hello ${fName} ${lName}, nice to meet you!`;
+}
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
-// consume(2,2,add); // 4
-// consume(10,16,multiply); // 160
-// consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
+consume(2,2,add); // 4
+consume(10,16,multiply); // 160
+consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
 
 // ==== Closures ==== 
@@ -26,6 +40,12 @@
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
 // Explanation: 
+/*
+* The reason why nestedfunction has access the the variable `internal` is because of closure. Because of the way that the execution stack works with
+* execution contexts', this allows any function declared in another function to have access to all of the variables declared in the function it is in, as well
+* as up the chain until it gets to the global scope, which it will also have access too. This does not work the other way around, however, because after
+* the execution context runs, it gets cleared from memory and that variable is no longer there.
+*/
 
 
 const external = "I'm outside the function";
