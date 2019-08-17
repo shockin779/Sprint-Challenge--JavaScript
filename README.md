@@ -30,31 +30,47 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+-The biggest difference is what gets returned. The .forEach method with return null. The .map method will return a new array, not affecting the original array.
+
 2. What is the difference between a function and a method?
+
+-Methods and functions are both functions. The naming difference is when you have a function as a property on an object, it is then called a method.
 
 3. What is closure?
 
+-A closure deals with scoping. Because of the way that the execution stack works with
+ execution contexts', this allows any function declared in another function to have access to all of the variables declared in the function it is in, as well
+ as up the chain until it gets to the global scope, which it will also have access too. This does not work the other way around, however, because after
+ the execution context runs, it gets cleared from memory and that variable is no longer there.
+
 4. Describe the four rules of the 'this' keyword.
 
+-Global this - this is when this is bound to the window object
+-implicit this - this is when this is bound to an object, it will be the item that is to the left of the .
+-explicit this - this is when you force a method call to use what you pass to it using .bind, .call, or .apply. This allows you to pick what you want 'this' to be.
+-new this - this is when you use the 'new' keyword. It creates a blank this object in the constructor, builds it out, then returns 'this'
+
 5. Why do we need super() in an extended class?
+
+-We need to use super in order to send the arguments needed up to the parent class in order to create the full object. Without using super(), you would not be able to make the object from the class.
 
 ## Project Set up
 
 Follow these steps to set up and work on your project:
 
-- [ ] Create a forked copy of this project.
-- [ ] Add PM as collaborator on Github.
-- [ ] Clone your OWN version of Repo (Not Lambda's by mistake!).
-- [ ] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
-- [ ] Create a pull request before you start working on the project requirements.  You will continuously push your updates throughout the project.
-- [ ] You are now ready to build this project with your preferred IDE
-- [ ] Implement the project on your Branch, committing changes regularly.
-- [ ] Push commits: git push origin `<firstName-lastName>`.
+- [x] Create a forked copy of this project.
+- [x] Add PM as collaborator on Github.
+- [x] Clone your OWN version of Repo (Not Lambda's by mistake!).
+- [x] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
+- [x] Create a pull request before you start working on the project requirements.  You will continuously push your updates throughout the project.
+- [x] You are now ready to build this project with your preferred IDE
+- [x] Implement the project on your Branch, committing changes regularly.
+- [x] Push commits: git push origin `<firstName-lastName>`.
 
 Follow these steps for completing your project:
 
-- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo).
-- [ ] Add your Project Manager as a Reviewer on the Pull-request
+- [x] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo).
+- [x] Add your Project Manager as a Reviewer on the Pull-request
 - [ ] PM then will count the HW as done by  merging the branch back into master.
 
 
